@@ -40,9 +40,9 @@ public:
 		{
 			cout << "Enter your first name and last name..." << endl;
 			cin >> name;
-			cout << "Enter your phone number "(000) 000 - 0000"..." << endl;
+			cout << "Enter your phone number..." << endl;
 			cin >> phone;
-			cout << "Enter your phone account number "0000000000"..." << endl;
+			cout << "Enter your phone account number..." << endl;
 			cin >> acctNumber;
 		}
 
@@ -105,10 +105,10 @@ public:
 		{
 			cout << "Your Balance now below 0." << endl;
 			cout << "$25 overdraft fee now added" << endl;
-			overdraft_fee = +25;
+			overdraft_fee =+ 25;
 		}
 
-		balance = -overdraft_fee;
+		balance =- overdraft_fee;
 	}
 
 };
