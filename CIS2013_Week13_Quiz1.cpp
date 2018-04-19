@@ -38,8 +38,12 @@ public:
 	{
 		if (x == 'n')
 		{
-			cout << "Enter your first name and last name...." << endl;
+			cout << "Enter your first name and last name..." << endl;
 			cin >> name;
+			cout << "Enter your phone number "(000) 000 - 0000"..." << endl;
+			cin >> phone;
+			cout << "Enter your phone account number "0000000000"..." << endl;
+			cin >> acctNumber;
 		}
 
 		if (x == 'd')
@@ -127,7 +131,7 @@ int main()
 		{
 			cout << "-----------------------------" << endl;
 			cout << "Hello " << myBank.name << ", your blance is : " << myBank.balance << endl;
-			cout << "Account ID: " << myBank.acctNumber << "Phone : " << myBank.phone << endl;
+			cout << "Account ID: " << myBank.acctNumber << ", Phone : " << myBank.phone << endl;
 			myBank.inSavings();
 			myCheck.InCheackingAcct();
 			myBank.PrintSelction();
