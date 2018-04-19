@@ -95,14 +95,17 @@ private:
 	int overdraft_fee;
 
 public:
-	if (balance < 0)
+	void InCheackingAcct()
 	{
-		cout << "Your Balance now below 0." << endl;
-		cout << "$25 overdraft fee now added" << endl;
-		overdraft_fee = +25;
-	}
+		if (balance < 0)
+		{
+			cout << "Your Balance now below 0." << endl;
+			cout << "$25 overdraft fee now added" << endl;
+			overdraft_fee = +25;
+		}
 
-	balance = -overdraft_fee;
+		balance = -overdraft_fee;
+	}
 
 };
 
@@ -112,6 +115,7 @@ int main()
 	char option;
 
 	Savings myBank;
+	CheckingAcct myCheck;
 
 
 	myBank.PrintSelction();
@@ -123,8 +127,9 @@ int main()
 		{
 			cout << "-----------------------------" << endl;
 			cout << "Hello " << myBank.name << ", your blance is : " << myBank.balance << endl;
+			cout << "Account ID: " << myBank.acctNumber << "Phone : " << myBank.phone << endl;
 			myBank.inSavings();
-			//myBank.cheack
+			myCheck.InCheackingAcct();
 			myBank.PrintSelction();
 			cin >> userInput;
 			myBank.Input(userInput);
